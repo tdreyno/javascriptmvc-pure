@@ -1,0 +1,34 @@
+A JavascriptMVC 3 Controller that uses the Pure (http://beebole.com/pure/) templating system.
+
+Usage:
+
+  Create a DOM element in your HTML:
+    <div class="who"></div>
+  
+  Create a Controller:
+  
+    $.Controller.Pure.extend("MyPureController", {}, {});
+    
+  Initialize the Controller:
+  
+    $(".who").my_pure();
+    
+  Set the data:
+  
+    $(".who").controller(MyPureController).setData({ who: "It's me" });
+  
+  Notice that the div's contents have now updated to contain the text "It's me"
+  
+
+Class level params:
+
+  defaultData: A default object to be used until setData is called
+  dataRefresher: A function, executed in the Controller instance scope to fetch data
+  directive: Custom mapping of nodes to data using the Pure directive format
+  autoload: Whether the dataRefresher should be run automatically
+  
+Instance config params
+
+  data: A default object to be used until setData is called
+  dataRefresher: A function, executed in the Controller instance scope to fetch data
+  autoload: Whether the dataRefresher should be run automatically
